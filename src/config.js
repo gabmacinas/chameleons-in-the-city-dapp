@@ -1,0 +1,19 @@
+module.exports = {
+  CONTRACT_ADDRESS: process.env.REACT_APP_CONTRACT_ADDRESS,
+  SCAN_LINK: process.env.REACT_APP_ETHERSCAN_URL,
+  NETWORK: {
+    NAME: 'Mainnet',
+    SYMBOL: 'ETH',
+    ID: 1,
+  },
+  NFT_NAME: 'Chameleons In The City',
+  SYMBOL: 'CITC',
+  MAX_SUPPLY: 6000,
+  WEI_COST: process.env.REACT_APP_WEI_COST,
+  DISPLAY_COST: process.env.REACT_APP_DISPLAY_COST,
+  GAS_LIMIT: process.env.REACT_APP_GAS_LIMIT,
+  MARKETPLACE: 'OpenSea',
+  MARKETPLACE_LINK: process.env.REACT_APP_OPENSEA_URL,
+  SHOW_BACKGROUND: true,
+  MAX_TRANSACTION: process.env.REACT_APP_MAX_TRANSACTION,
+};

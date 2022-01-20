@@ -7,6 +7,7 @@ import chAnimated from './ch-animated.gif';
 import './App.css';
 import * as s from './styles/globalStyles';
 import styled from 'styled-components';
+import config from './config.js';
 
 const truncate = (input, len) => (input.length > len ? `${input.substring(0, len)}...` : input);
 
@@ -121,6 +122,7 @@ function App() {
     MARKETPLACE: '',
     MARKETPLACE_LINK: '',
     SHOW_BACKGROUND: false,
+    MAX_TRANSACTION: 0,
   });
 
   const claimNFTs = () => {
@@ -163,8 +165,8 @@ function App() {
 
   const incrementMintAmount = () => {
     let newMintAmount = mintAmount + 1;
-    if (newMintAmount > 8) {
-      newMintAmount = 8;
+    if (newMintAmount > CONFIG.MAX_TRANSACTION) {
+      newMintAmount = CONFIG.MAX_TRANSACTION;
     }
     setMintAmount(newMintAmount);
   };
@@ -176,13 +178,6 @@ function App() {
   };
 
   const getConfig = async () => {
-    const configResponse = await fetch('/config/config.json', {
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-    });
-    const config = await configResponse.json();
     SET_CONFIG(config);
   };
 
@@ -201,22 +196,22 @@ function App() {
           <img src={icon} alt='./ch-icon.png' className='img-logo' width='60px' />
           <ul>
             <li>
-              <a target='_blank' href='https://discord.gg/7NsTzyuBKE'>
+              <a target='_blank' href={process.env.REACT_APP_DISCORD_URL}>
                 Discord
               </a>
             </li>
             <li>
-              <a target='_blank' href='https://twitter.com/ChameleonsITC'>
+              <a target='_blank' href={process.env.REACT_APP_TWITTER_URL}>
                 Twitter
               </a>
             </li>
             <li>
-              <a target='_blank' href='https://opensea.io/collection/chameleons-in-the-city'>
+              <a target='_blank' href={process.env.REACT_APP_OPENSEA_URL}>
                 Opensea
               </a>
             </li>
             <li>
-              <a target='_blank' href='https://etherscan.io/address/0x7c272a538dd21b74b935878df4079185b47d4eb9'>
+              <a target='_blank' href={process.env.REACT_APP_ETHERSCAN_URL}>
                 Etherscan
               </a>
             </li>
@@ -363,11 +358,11 @@ function App() {
           How many Chameleons can I mint?
         </p>
         <p>
-          * You can mint up to <b>8</b> Chameleon per transaction. <br /> <br />
+          * You can mint up to <b>{CONFIG.MAX_TRANSACTION}</b> Chameleon per transaction. <br /> <br />
           How much is a Chameleon worth?
         </p>
         <p>
-          * Chameleons are worth <b>0.015 ETH</b>.
+          * Chameleons are worth <b>{CONFIG.DISPLAY_COST} ETH</b>.
         </p>
       </div>
 
