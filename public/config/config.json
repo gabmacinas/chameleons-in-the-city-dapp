@@ -2,9 +2,9 @@
   "CONTRACT_ADDRESS": "0xfcA294ddeb03A78eCdEeA2B26Ca01E96dCFf2336",
   "SCAN_LINK": "https://rinkeby.etherscan.io/address/0xfca294ddeb03a78ecdeea2b26ca01e96dcff2336",
   "NETWORK": {
-    "NAME": "Ethereum Rinkeby",
+    "NAME": "mainnet",
     "SYMBOL": "ETH",
-    "ID": 4
+    "ID": 1
   },
   "NFT_NAME": "Chameleons In The City",
   "SYMBOL": "CITC",
@@ -13,6 +13,6 @@
   "DISPLAY_COST": 0.015,
   "GAS_LIMIT": 285000,
   "MARKETPLACE": "OpenSea",
-  "MARKETPLACE_LINK": "https://testnets.opensea.io/collection/chameleons-in-the-city-v3",
+  "MARKETPLACE_LINK": "https://opensea.io/collection/chameleons-in-the-city",
   "SHOW_BACKGROUND": true
 }

@@ -211,12 +211,12 @@ function App() {
               </a>
             </li>
             <li>
-              <a target='_blank' href='https://testnets.opensea.io/collection/chameleons-in-the-city-v3'>
+              <a target='_blank' href='https://opensea.io/collection/chameleons-in-the-city'>
                 Opensea
               </a>
             </li>
             <li>
-              <a target='_blank' href='https://rinkeby.etherscan.io/address/0xfca294ddeb03a78ecdeea2b26ca01e96dcff2336'>
+              <a target='_blank' href='https://etherscan.io/address/0x7c272a538dd21b74b935878df4079185b47d4eb9'>
                 Etherscan
               </a>
             </li>
