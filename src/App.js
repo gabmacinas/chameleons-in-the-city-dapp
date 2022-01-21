@@ -275,7 +275,8 @@ function App() {
                       <s.TextDescription
                         style={{
                           textAlign: 'center',
-                          color: 'var(--accent-text)',
+                          color: 'black',
+                          fontSize: '2em',
                         }}
                       >
                         {blockchain.errorMsg}
