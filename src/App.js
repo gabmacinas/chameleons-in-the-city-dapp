@@ -221,6 +221,7 @@ function App() {
       <div className='semitrans'>
         <h1>Chameleons In The City</h1>
         <img src={chAnimated} alt='chAnimated' className='floatleft' />
+        <h2>No Roadmap. (IDK?) Just building Community Sharing Alphas</h2>
         <br />
         <p>
           Chameleons are one of the Masters in Camouflage. <br /> <br />
@@ -348,21 +349,14 @@ function App() {
       </div>
       <div className='white'>
         <h2>Frequently Asked Questions</h2>
-        <p>How many Chameleons are there?</p>
+        <p></p>
         <p>
-          * There are currently <b>6000</b> Chameleon in the City. <br /> <br />
-          How do I mint my own Chameleon?
-        </p>
-        <p>
+          How many Chameleons are there? <br />* There are currently <b>6000</b> Chameleon in the City. <br /> <br />
+          How do I mint my own Chameleon? <br />
           * You can mint your own Chameleon by clicking the button above. <br /> <br />
-          How many Chameleons can I mint?
-        </p>
-        <p>
-          * You can mint up to <b>{CONFIG.MAX_TRANSACTION}</b> Chameleon per transaction. <br /> <br />
-          How much is a Chameleon worth?
-        </p>
-        <p>
-          * Chameleons are worth <b>{CONFIG.DISPLAY_COST} ETH</b>.
+          How many Chameleons can I mint? <br />* You can mint up to <b>{CONFIG.MAX_TRANSACTION}</b> Chameleon per
+          transaction. <br /> <br />
+          How much is a Chameleon worth? <br />* Chameleons are worth <b>{CONFIG.DISPLAY_COST} ETH</b>.
         </p>
       </div>
 

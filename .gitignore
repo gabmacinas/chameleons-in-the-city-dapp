@@ -141,3 +141,6 @@ dist
 
 .DS_Store
 .history/
+.env.development
+.env.production
+.vscode/
