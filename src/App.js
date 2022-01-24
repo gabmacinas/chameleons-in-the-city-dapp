@@ -174,6 +174,8 @@ function App() {
   const getData = () => {
     if (blockchain.account !== '' && blockchain.smartContract !== null) {
       dispatch(fetchData(blockchain.account));
+      console.log('get blockchain account:', blockchain.account);
+      console.log('get blockchain smartContract:', blockchain.smartContract);
     }
   };
 
@@ -221,7 +223,7 @@ function App() {
       <div className='semitrans'>
         <h1>Chameleons In The City</h1>
         <img src={chAnimated} alt='chAnimated' className='floatleft' />
-        <h2>No Roadmap. (IDK?) Just building Community Sharing Alphas</h2>
+        <h2>No Roadmap. Just building Community Sharing Alphas</h2>
         <br />
         <p>
           Chameleons are one of the Masters in Camouflage. <br /> <br />
@@ -357,7 +359,7 @@ function App() {
           * You can mint your own Chameleon by clicking the button above. <br /> <br />
           How many Chameleons can I mint? <br />* You can mint up to <b>{CONFIG.MAX_TRANSACTION}</b> Chameleon per
           transaction. <br /> <br />
-          How much is a Chameleon worth? <br />* Chameleons are worth <b>{CONFIG.DISPLAY_COST} ETH</b>.
+          How much is a Chameleon worth? <br />* Chameleons are worth <b>FREE</b>.
         </p>
       </div>
 
