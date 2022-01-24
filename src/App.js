@@ -223,6 +223,7 @@ function App() {
       <div className='semitrans'>
         <h1>Chameleons In The City</h1>
         <img src={chAnimated} alt='chAnimated' className='floatleft' />
+        <h1>NOW OPEN FOR FREE MINT!!!</h1>
         <h2>No Roadmap. Just building Community Sharing Alphas</h2>
         <br />
         <p>
@@ -364,7 +365,7 @@ function App() {
       </div>
 
       <div className='dark'>
-        <p>All rights reserved.</p>
+        <h1>FREE MINT ROCKS!!!. LFG!!!</h1>
       </div>
     </>
   );
