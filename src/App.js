@@ -210,7 +210,7 @@ function App() {
               <a onClick={() => openInNewTab(process.env.REACT_APP_OPENSEA_URL)}>Opensea</a>
             </li>
             <li>
-              <a onClick={() => openInNewTab(process.env.REACT_APP_ETHERSCAN_URL)}>Opensea</a>
+              <a onClick={() => openInNewTab(process.env.REACT_APP_ETHERSCAN_URL)}>Etherscan</a>
             </li>
           </ul>
         </div>
