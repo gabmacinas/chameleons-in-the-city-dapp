@@ -189,6 +189,11 @@ function App() {
     getData();
   }, [blockchain.account]);
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <>
       <div className='fullscreen nopadding'>
@@ -196,24 +201,16 @@ function App() {
           <img src={icon} alt='./ch-icon.png' className='img-logo' width='60px' />
           <ul>
             <li>
-              <a target='_blank' href={process.env.REACT_APP_DISCORD_URL}>
-                Discord
-              </a>
+              <a onClick={() => openInNewTab(process.env.REACT_APP_DISCORD_URL)}>Discord</a>
             </li>
             <li>
-              <a target='_blank' href={process.env.REACT_APP_TWITTER_URL}>
-                Twitter
-              </a>
+              <a onClick={() => openInNewTab(process.env.REACT_APP_TWITTER_URL)}>Twitter</a>
             </li>
             <li>
-              <a target='_blank' href={process.env.REACT_APP_OPENSEA_URL}>
-                Opensea
-              </a>
+              <a onClick={() => openInNewTab(process.env.REACT_APP_OPENSEA_URL)}>Opensea</a>
             </li>
             <li>
-              <a target='_blank' href={process.env.REACT_APP_ETHERSCAN_URL}>
-                Etherscan
-              </a>
+              <a onClick={() => openInNewTab(process.env.REACT_APP_ETHERSCAN_URL)}>Opensea</a>
             </li>
           </ul>
         </div>
