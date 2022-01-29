@@ -218,7 +218,7 @@ function App() {
       <div className='semitrans'>
         <h1>Chameleons In The City</h1>
         <img src={chAnimated} alt='chAnimated' className='floatleft' />
-        <h1>NOW OPEN FOR FREE MINT!!!</h1>
+        <h1>FREE MINTING HAS ENDED</h1>
         <h2>No Roadmap. Just building Community Sharing Alphas</h2>
         <br />
         <p>
@@ -229,121 +229,12 @@ function App() {
           Can you spot them in the City? Or are you one of them? Happy Hunting!
         </p>
         <s.Container flex={2} jc={'center'} ai={'center'} style={{}}>
-          {Number(data.totalSupply) >= CONFIG.MAX_SUPPLY ? (
-            <>
-              <s.TextTitle style={{ fontSize: '2em', textAlign: 'center', color: 'black' }}>
-                The sale has ended.
-              </s.TextTitle>
-              <s.SpacerSmall />
-              <StyledLink target={'_blank'} href={CONFIG.MARKETPLACE_LINK}>
-                {CONFIG.MARKETPLACE}
-              </StyledLink>
-              <s.SpacerMedium />
-            </>
-          ) : (
-            <>
-              {blockchain.account === '' || blockchain.smartContract === null ? (
-                <s.Container ai={'center'} jc={'center'}>
-                  <s.TextDescription
-                    style={{
-                      textAlign: 'center',
-                      color: 'black',
-                      fontSize: '2em',
-                    }}
-                  >
-                    {data.totalSupply} / {CONFIG.MAX_SUPPLY}
-                    <br />
-                    Connect to the {CONFIG.NETWORK.NAME} network
-                  </s.TextDescription>
-                  <s.SpacerMedium />
-                  <StyledButton
-                    onClick={(e) => {
-                      e.preventDefault();
-                      dispatch(connect());
-                      getData();
-                    }}
-                  >
-                    CONNECT
-                  </StyledButton>
-                  <s.SpacerMedium />
-
-                  {blockchain.errorMsg !== '' ? (
-                    <>
-                      <s.SpacerSmall />
-                      <s.TextDescription
-                        style={{
-                          textAlign: 'center',
-                          color: 'black',
-                          fontSize: '2em',
-                        }}
-                      >
-                        {blockchain.errorMsg}
-                      </s.TextDescription>
-                    </>
-                  ) : null}
-                </s.Container>
-              ) : (
-                <>
-                  <s.TextDescription
-                    style={{
-                      textAlign: 'center',
-                      color: 'black',
-                      fontSize: '2em',
-                    }}
-                  >
-                    {data.totalSupply} / {CONFIG.MAX_SUPPLY} <br />
-                    {feedback}
-                  </s.TextDescription>
-                  <s.Container ai={'center'} jc={'center'} fd={'row'}>
-                    <StyledRoundButton
-                      style={{ lineHeight: 0.4 }}
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        decrementMintAmount();
-                      }}
-                    >
-                      -
-                    </StyledRoundButton>
-                    <s.TextDescription
-                      style={{
-                        textAlign: 'center',
-                        color: 'black',
-                        fontSize: '2em',
-                      }}
-                    >
-                      {mintAmount}
-                    </s.TextDescription>
-                    <StyledRoundButton
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        incrementMintAmount();
-                      }}
-                    >
-                      +
-                    </StyledRoundButton>
-                  </s.Container>
-                  <s.Container ai={'center'} jc={'center'} fd={'row'}>
-                    <StyledButton
-                      disabled={claimingNft ? 1 : 0}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        claimNFTs();
-                        getData();
-                      }}
-                    >
-                      {claimingNft ? 'LOADING' : 'BUY'}
-                    </StyledButton>
-                    <s.SpacerSmall />
-                  </s.Container>
-                  <div>
-                    <br />
-                  </div>
-                </>
-              )}
-            </>
-          )}
+          <>
+            <s.TextTitle style={{ fontSize: '2em', textAlign: 'center', color: 'black' }}>
+              6000/6000 <br /> The sale has ended.
+            </s.TextTitle>
+            <s.SpacerMedium />
+          </>
         </s.Container>
       </div>
       <div className='white'>
